@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>com.jetbrains.findUniqueUsages</id>
+    <name>Find Unique Usages</name>
+    <vendor email="emad.aghayi@jetbrains.com" url="http://www.jetBrains.com">Jetbrains</vendor>
+
+    <description><![CDATA[ It cluster similar usages based on clusters usagase are placed in]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <usageGroupingRuleProvider implementation="gui.UniqueGroupingRuleProvider"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
