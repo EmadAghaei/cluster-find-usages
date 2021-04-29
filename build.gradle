@@ -1,10 +1,10 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.7.2'
+    id 'org.jetbrains.intellij' version '0.7.3'
 }
 
 group 'com.jetbrains'
-version '1.1-SNAPSHOT'
+version '0.0.4'
 
 repositories {
     mavenCentral()
@@ -18,7 +18,7 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2020.3.2'
+    version '2020.3.4'
 }
 patchPluginXml {
     changeNotes """
@@ -30,5 +30,6 @@ test {
 }
 
 publishPlugin {
- token 'perm:ZW1hZC5hZ2hheWk=.OTItMzc5NA==.sl5ao96lNq2F1AzkMvXnqWFyFPEJVF'
+// token ''
+    token  System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken")
 }
